@@ -8,9 +8,8 @@ jobs:
     - uses: actions/checkout@v3
     - run: yarn
     - run: yarn cypress:run run
-  store-as-artificat:
-    runs-on: ubuntu-latest
-    steps:
+      continue-on-error: true
+    - uses: mainmatter/continue-on-error-comment@v1
     - uses: actions/upload-artifact@v3
       with:
         name: my-artifact
