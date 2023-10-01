@@ -1,0 +1,11 @@
+{
+  "cypress/e2e/spec.cy.js": {
+    "template spec -> passes": [
+      {
+        "type": "cy:command",
+        "severity": "error",
+        "message": "assert\texpected **true** to equal **false**"
+      }
+    ]
+  }
+}

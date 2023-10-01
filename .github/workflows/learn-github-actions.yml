@@ -2,16 +2,14 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  run-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
 
-    - run: mkdir -p path/to/artifact
-
-    - run: echo hello > path/to/artifact/world.txt
+    - run: yarn cypress:open run
 
     - uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: path/to/artifact/world.txt
+        path: cypress/cypress-logs
