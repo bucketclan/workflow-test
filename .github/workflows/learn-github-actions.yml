@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: yarn
-    - run: yarn cypress:open run
+    - run: yarn cypress:run run
 
     - uses: actions/upload-artifact@v3
       with:
