@@ -9,6 +9,7 @@ jobs:
     - run: yarn
     - run: yarn cypress:run
       continue-on-error: true
+    - run: ls -tp cypress-logs | grep -v '/$' | tail -n +11 | xargs -I {} rm -- {}
     - uses: mainmatter/continue-on-error-comment@v1
     - uses: actions/upload-artifact@v3
       with:
