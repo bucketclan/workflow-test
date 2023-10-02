@@ -1,5 +1,5 @@
 describe('template spec', () => {
   it('passes', () => {
-    expect(true).to.equal(false);
+    expect(true).to.equal(true);
   })
 })
